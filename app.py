@@ -90,9 +90,14 @@ def protected():
             
             filename = secure_filename(file.filename)
             
-            file.save(os.path.join(app.config['UPLOADED_IMAGES_DEST'], filename))
-            file_count += 1
-            
+            if os.path.isdir(app.config['UPLOADED_IMAGES_DEST']):
+                file.save(os.path.join(app.config['UPLOADED_IMAGES_DEST'], filename))
+                file_count += 1
+            else:
+                
+                os.makedirs(app.config['UPLOADED_IMAGES_DEST'])
+                file.save(os.path.join(app.config['UPLOADED_IMAGES_DEST'], filename))
+                file_count += 1    
 
         flash("Uploaded {} image(s)".format(file_count))
 
