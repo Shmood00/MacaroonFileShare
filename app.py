@@ -1,19 +1,15 @@
 from flask import Flask, render_template, flash, redirect, url_for, send_from_directory, Markup
 from flask_bootstrap import Bootstrap
-
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from pymacaroons import Macaroon, Verifier
 from flask_uploads import configure_uploads, IMAGES, UploadSet
 from werkzeug.utils import secure_filename
-from werkzeug.datastructures import  FileStorage
 import glob, os
 import netifaces as ni
-
 import models
 import forms
-#from models import User
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -23,7 +19,7 @@ login_manager.init_app(app)
 login_manager.login_view = 'login'
 
 app.config['SECRET_KEY'] = 'secret'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////{}/Projects/TEST//MacaroonLogin/login.db'.format(os.path.expanduser('~'))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////{}/Projects//MacaroonFileShare/login.db'.format(os.path.expanduser('~'))
 app.config['UPLOADED_IMAGES_DEST'] = 'uploads/images'
 
 images = UploadSet('images', IMAGES)
