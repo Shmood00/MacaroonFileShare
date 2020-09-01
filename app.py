@@ -131,6 +131,8 @@ def make_token():
 
     form.image_name.choices = [(name, name) for name in names]
 
+    form.expiry_time.choices = [(x, '{} minutes'.format(x)) for x in range(1,31)]
+
     if form.validate_on_submit():
         email = form.user_email.data
 
@@ -141,7 +143,9 @@ def make_token():
             key=keys['secret-key']
         )
 
-        expiry_time = datetime.now()+timedelta(minutes=1)
+        chosen_expiry = int(form.expiry_time.data)
+
+        expiry_time = datetime.now()+timedelta(minutes=chosen_expiry)
 
         m.add_first_party_caveat('email = {}'.format(email))
         m.add_first_party_caveat('image_name = {}'.format(form.image_name.data))

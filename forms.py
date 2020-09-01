@@ -19,6 +19,8 @@ class MakeToken(FlaskForm):
   
     image_name = SelectField('Image Name', validators=[InputRequired()])
 
+    expiry_time = SelectField('Expiry Time', validators=[InputRequired()])
+
 
 class VerifyEmail(FlaskForm):
     email = StringField('Email', validators=[InputRequired(), Email(message='Invalid email'), Length(max=50)])

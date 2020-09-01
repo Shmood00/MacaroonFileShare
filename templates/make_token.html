@@ -55,7 +55,7 @@
               {{wtf.form_field(form.image_name)}}
 
               
-              <img id="images" class="img-fluid" src=""><br /><br />
+              <img id="images" class="img-fluid" src="">
               
               <script>
                 let image_name = document.getElementById('image_name');
@@ -72,6 +72,8 @@
                   }        
                 }
               </script>
+              
+              {{wtf.form_field(form.expiry_time)}}
               <button class="btn btn-primary" type="submit">Create Token</button>
           </form>
         
