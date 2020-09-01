@@ -10,6 +10,7 @@ import glob, os
 import netifaces as ni
 import models
 import forms
+from datetime import datetime, timedelta
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -29,6 +30,20 @@ def get_images():
     names = [os.path.basename(x) for x in glob.glob('{}/*'.format(app.config['UPLOADED_IMAGES_DEST']))]
 
     return names
+
+
+def check_expiry(caveat):
+    if not caveat.startswith('time < '):
+        return False
+    
+    try:
+        now = datetime.now()
+        when = datetime.strptime(caveat[7:], '%Y-%m-%d %H:%M:%S.%f')
+
+        return now < when
+    except:
+        return False
+
 
 keys = {
     'secret-key': app.config['SECRET_KEY']
@@ -54,7 +69,7 @@ def login():
 
         if user:
             if check_password_hash(user.password, form.password.data):
-                login_user(user, remember=form.remember.data)
+                login_user(user)
                 return redirect(url_for('index'))
         else:
         
@@ -126,8 +141,11 @@ def make_token():
             key=keys['secret-key']
         )
 
+        expiry_time = datetime.now()+timedelta(minutes=1)
+
         m.add_first_party_caveat('email = {}'.format(email))
         m.add_first_party_caveat('image_name = {}'.format(form.image_name.data))
+        m.add_first_party_caveat('time < {}'.format(expiry_time))
 
         ###ONLY FOR VM
         try:
@@ -177,6 +195,7 @@ def gallery_token(token, image_name):
         if form.validate_on_submit():
             v.satisfy_exact('email = {}'.format(form.email.data))
             v.satisfy_exact('image_name = {}'.format(image_name))
+            v.satisfy_general(check_expiry)
 
             try:
                 verified = v.verify(
