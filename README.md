@@ -58,3 +58,6 @@ The creation of the Google Macaroon takes place when a user clicks on the `Give 
 Obviously, prior to sharing an image with someone, you must first uploaded an image using the `Upload Image` button.
 
 ![](pics/maketoken.gif)
+
+Once the Macaroon has been created, the link that's generated would (in theory) be sent to `anotheruser@user.com` so they can access the picture you would like to share with them! The user in no way has to register on the website, all they have to do is enter in their email address to view the image (until the expiry time you chose runs out).
+
