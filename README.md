@@ -42,3 +42,9 @@ Once the table is created, you can run the entire project with:
 
 Once up and running, direct yourself to `http://localhost:5000/register` to create a user.
 
+![](pics/registeruser.gif)
+
+We can further verify the user was successfully by checking the database we created. To do this, run the following command:
+* `$ sqlite3 login.db`
+* `sqlite> select * from user;`
+
