@@ -9,5 +9,6 @@ To properly run the application, the following packages are required:
 * `pip3 install flask-login`
 * `pip3 install flask-sqlalchemy`
 * `pip3 install flask-reuploaded`
+* `pip3 install flask-wtforms`
 * `pip3 install pymacaroons`
 * `pip3 install email_validator`
