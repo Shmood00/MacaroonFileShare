@@ -18,3 +18,19 @@ To properly run the application, the following packages are required:
 The easiest way to ensure all of the packages needed are installed is to run the following command within `~/Projects/MacaroonFileShare` folder:
 
 `sudo pip3 install -r requirements.txt`
+
+# Running
+
+In order to run the application direct yourself to the project file:
+* `cd ~/Projects/MacaroonFileshare`
+
+Once in the proper directory, the sqlite3 database needs to be created. To do this, run the following:
+* `sqlite3 login.db`
+
+Once created, you have to ensure the `users` database table is successfully created, to do this run:
+* `$ python3`
+* `$ from models import db`
+* `$ db.create_all()`
+
+
+
