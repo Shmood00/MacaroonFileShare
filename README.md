@@ -48,3 +48,8 @@ We can further verify the user was successfully by checking the database we crea
 * `$ sqlite3 login.db`
 * `sqlite> select * from user;`
 
+![](pics/checkuser.gif)
+
+Now that the user has successfully been added to the database, you can proceed with logging in and using the application.
+
+![](pics/login.gif)
