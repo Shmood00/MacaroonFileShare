@@ -32,8 +32,6 @@ Once created, you have to ensure the `users` database table is successfully crea
 * `$ from models import db`
 * `$ db.create_all()`
 
-Here's a GIF outlining the creation of the database:
-
 ![](pics/dbcreation.gif)
 
 
@@ -53,3 +51,10 @@ We can further verify the user was successfully by checking the database we crea
 Now that the user has successfully been added to the database, you can proceed with logging in and using the application.
 
 ![](pics/login.gif)
+
+# Creating A Macaroon
+The creation of the Google Macaroon takes place when a user clicks on the `Give Image Access` button in the menu. You will be asked to provide a user email, choose the image you would like to share with them as well as how long the link generated will be active for.
+
+Obviously, prior to sharing an image with someone, you must first uploaded an image using the `Upload Image` button.
+
+
