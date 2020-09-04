@@ -34,5 +34,11 @@ Once created, you have to ensure the `users` database table is successfully crea
 
 Here's a GIF outlining the creation of the database:
 
+![](pics/dbcreation.gif)
 
+
+Once the table is created, you can run the entire project with:
+* `python3 app.py`
+
+Once up and running, direct yourself to `http://localhost:5000/register` to create a user.
 
