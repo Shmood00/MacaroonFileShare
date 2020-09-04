@@ -65,3 +65,4 @@ Once the Macaroon has been created, the link that's generated would (in theory) 
 
 Once the 2 minute expiry we set in the example expires, the user is no longer able to access the image shared with them.
 
+![](pic/noaccess.gif)
