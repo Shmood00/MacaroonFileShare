@@ -12,3 +12,9 @@ To properly run the application, the following packages are required:
 * `pip3 install flask-wtforms`
 * `pip3 install pymacaroons`
 * `pip3 install email_validator`
+
+# Installation
+
+The easiest way to ensure all of the packages needed are installed is to run the following command within `~/Projects/MacaroonFileShare` folder:
+
+`sudo pip3 install -r requirements.txt`
