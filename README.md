@@ -57,4 +57,4 @@ The creation of the Google Macaroon takes place when a user clicks on the `Give 
 
 Obviously, prior to sharing an image with someone, you must first uploaded an image using the `Upload Image` button.
 
-
+![](pics/maketoken.gif)
