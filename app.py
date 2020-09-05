@@ -19,8 +19,10 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+current_dir = os.getcwd()
+
 app.config['SECRET_KEY'] = 'secret'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////{}/Projects//MacaroonFileShare/login.db'.format(os.path.expanduser('~'))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////{}/login.db'.format(current_dir)
 app.config['UPLOADED_IMAGES_DEST'] = 'uploads/images'
 
 images = UploadSet('images', IMAGES)
