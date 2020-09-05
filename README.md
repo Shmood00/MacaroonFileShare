@@ -43,7 +43,7 @@ Once created, you have to ensure the `users` database table is successfully crea
 * `>>> from models import db`
 * `>>> db.create_all()`
 
-![](pics/dbcreation.gif)
+![](pics/dbcreation.webp)
 
 
 Once the table is created, you can run the entire project with:
@@ -51,29 +51,29 @@ Once the table is created, you can run the entire project with:
 
 Once up and running, direct yourself to `http://localhost:5000/register` to create a user.
 
-![](pics/registeruser.gif)
+![](pics/registeruser.webp)
 
 We can further verify the user was successfully by checking the database we created. To do this, run the following command:
 * `$ sqlite3 login.db`
 * `sqlite> select * from user;`
 
-![](pics/checkuser.gif)
+![](pics/checkuser.webp)
 
 Now that the user has successfully been added to the database, you can proceed with logging in and using the application.
 
-![](pics/login.gif)
+![](pics/login.webp)
 
 # Creating A Macaroon
 The creation of the Google Macaroon takes place when a user clicks on the `Give Image Access` button in the menu. You will be asked to provide a user email, choose the image you would like to share with them as well as how long the link generated will be active for.
 
 Obviously, prior to sharing an image with someone, you must first uploaded an image using the `Upload Image` button.
 
-![](pics/maketoken.gif)
+![](pics/maketoken.webp)
 
 Once the Macaroon has been created, the link that's generated would (in theory) be sent to `anotheruser@user.com` so they can access the picture you would like to share with them! The user in no way has to register on the website, all they have to do is enter in their email address to view the image (until the expiry time you chose runs out).
 
-![](pics/accesssharedimage.gif)
+![](pics/accesssharedimage.webp)
 
 Once the 2 minute expiry we set in the example expires, the user is no longer able to access the image shared with them.
 
-![](pics/noaccess.gif)
+![](pics/noaccess.webp)
