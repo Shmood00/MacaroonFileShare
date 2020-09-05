@@ -17,7 +17,7 @@ To properly run the application, the following packages are required:
 
 The easiest way to ensure all of the packages needed are installed is to run the following command within `~/Projects/MacaroonFileShare` folder:
 
-* `sudo pip3 install -r requirements.txt`
+* `pip3 install -r requirements.txt`
 
 # Running
 
