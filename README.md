@@ -26,14 +26,14 @@ To properly run the application, the following packages are required:
 
 # Installation
 
-The easiest way to ensure all of the packages needed are installed is to run the following command within `~/Projects/MacaroonFileShare` folder:
+The easiest way to ensure all of the packages needed are installed is to run the following command within the folder you have cloned this repository to:
 
 * `pip3 install -r requirements.txt`
 
 # Running
 
-In order to run the application direct yourself to the project file:
-* `$ cd ~/Projects/MacaroonFileshare`
+In order to run the application direct yourself to the cloned reposity:
+* `$ cd MacaroonFileshare/`
 
 Once in the proper directory, the sqlite3 database needs to be created. To do this, run the following:
 * `$ sqlite3 login.db`
