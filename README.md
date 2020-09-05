@@ -6,6 +6,13 @@ This repository was created to demonstrate a simple application of using Google 
 
 Macaroons are access tokens that use caveats to ensure a user is who they say they are. They were created by individuals at Google in 2014, the research paper can be found [here](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/41892.pdf). Macaroons are essentially cookies that help reduce the scope of a token. With caveats, it further allows users to restrict the scope. With the use of caveats it makes delegation easy. In this applicaiton, caveats are used to reduce the scope of the token to a given users email address, the image being shared and an expiry. If any of these caveats are not met, the token is considered invalid, and the image being shared will not be accessible to the user with the link.
 
+Further information on Google Macaroons can be found at the following links:
+* [https://securityboulevard.com/2020/05/cloud-series-authorize-anyone-anything-with-macaroons/](https://securityboulevard.com/2020/05/cloud-series-authorize-anyone-anything-with-macaroons/)
+* [https://hackingdistributed.com/2014/05/16/macaroons-are-better-than-cookies/](https://hackingdistributed.com/2014/05/16/macaroons-are-better-than-cookies/)
+
+There also exists a [playground](http://macaroons.io/) that can be used to test and fiddle with these tokens.
+
+
 # Packages Needed
 
 To properly run the application, the following packages are required:
