@@ -30,7 +30,7 @@ Once in the proper directory, the sqlite3 database needs to be created. To do th
 Once created, you have to ensure the `users` database table is successfully created, to do this run:
 * `$ python3`
 * `>>> from models import db`
-* `sqlite> db.create_all()`
+* `>>> db.create_all()`
 
 ![](pics/dbcreation.gif)
 
