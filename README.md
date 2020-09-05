@@ -33,7 +33,7 @@ The easiest way to ensure all of the packages needed are installed is to run the
 # Running
 
 In order to run the application direct yourself to the cloned reposity:
-* `$ cd MacaroonFileshare/`
+* `$ cd MacaroonFileShare/`
 
 Once in the proper directory, the sqlite3 database needs to be created. To do this, run the following:
 * `$ sqlite3 login.db`
