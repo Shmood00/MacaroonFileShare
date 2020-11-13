@@ -22,6 +22,7 @@ login_manager.login_view = 'login'
 current_dir = os.getcwd()
 
 #Flask app configurations
+#Secret key and database location should be stored in an external file
 app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////{}/login.db'.format(current_dir)
 app.config['UPLOADED_IMAGES_DEST'] = 'uploads/images'
